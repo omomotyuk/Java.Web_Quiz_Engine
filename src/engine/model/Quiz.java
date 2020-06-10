@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Quiz {
 
-    private int id;
+    private Long id;
     private String title;
     private String text;
     private String[] options;
@@ -15,7 +15,7 @@ public class Quiz {
     public Quiz() {
     }
 
-    public Quiz(int id, String title, String text, String[] options) {
+    public Quiz(Long id, String title, String text, String[] options) {
         this.id = id;
         this.title = title;
         this.text = text;
@@ -23,4 +23,35 @@ public class Quiz {
     }
 
     // getters and setters
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String[] getOptions() {
+        return options;
+    }
+
+    public void setOptions(String[] options) {
+        this.options = options;
+    }
 }
