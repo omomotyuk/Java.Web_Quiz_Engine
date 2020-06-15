@@ -1,5 +1,7 @@
 package engine.model;
 
+import org.springframework.http.ResponseEntity;
+
 public class Respond {
 
     private boolean success;
