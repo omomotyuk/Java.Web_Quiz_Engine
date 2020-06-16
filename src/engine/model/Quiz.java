@@ -11,15 +11,17 @@ public class Quiz {
     private String title;
     private String text;
     private List<String> options;
+    private int correct;
 
     public Quiz() {
     }
 
-    public Quiz(String title, String text, List<String> options) {
+    public Quiz(String title, String text, List<String> options, int correct) {
         //this.id = id;
         this.title = title;
         this.text = text;
         this.options = options;
+        this.correct = correct;
     }
 
     // getters and setters
@@ -53,5 +55,17 @@ public class Quiz {
 
     public void setOptions(List<String> options) {
         this.options = options;
+    }
+
+    public int getCorrect() {
+        return correct;
+    }
+
+    public void setCorrect(int correct) {
+        this.correct = correct;
+    }
+
+    public boolean isCorrect(int value) {
+        return correct == value;
     }
 }
