@@ -27,24 +27,15 @@ public class QuizController {
     }
 
     @GetMapping(path = "/api/quiz")
-    public ResponseEntity<Quiz> getQuiz() {
-
-        HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.setContentType(MediaType.APPLICATION_JSON);
-
-        return new ResponseEntity<>(quizzes.get(0), httpHeaders, HttpStatus.OK);
-
-        //return quizzes.get(0);
+    public Quiz getQuiz() {
+        return quizzes.get(0);
     }
+    
     @PostMapping(path = "/api/quiz")
-        public ResponseEntity<Respond> addQuiz(@RequestParam(name = "answer") int answer) {
+        public Respond addQuiz(@RequestParam(name = "answer") int answer) {
         Respond respond = new Respond();
         var output = answer == 2 ? respond.success() : respond.failure();
-
-        HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.setContentType(MediaType.APPLICATION_JSON);
-
-        return new ResponseEntity<>(output, httpHeaders, HttpStatus.OK);
+        return output;
     }
 
 }
