@@ -18,11 +18,6 @@ public class QuizController {
 
     public QuizController() {
         Quiz quiz = new Quiz();
-        //quiz.setId(1L);
-        quiz.setTitle("The Java Logo");
-        quiz.setText("What is depicted on the Java logo?");
-        List<String> options = new ArrayList<>(){{add("Robot"); add("Tea leaf"); add("Cup of coffee"); add("Bug");}};
-        quiz.setOptions(options);
         quizzes.add(quiz);
     }
 
