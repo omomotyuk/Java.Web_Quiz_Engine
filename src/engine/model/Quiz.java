@@ -14,10 +14,6 @@ public class Quiz {
     private int correct;
 
     public Quiz() {
-        setTitle("The Java Logo");
-        setText("What is depicted on the Java logo?");
-        List<String> options = new ArrayList<>(){{add("Robot"); add("Tea leaf"); add("Cup of coffee"); add("Bug");}};
-        setCorrect(2);
     }
 
     public Quiz(String title, String text, List<String> options, int correct) {

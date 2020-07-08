@@ -31,11 +31,13 @@ public class Respond {
         this.feedback = feedback;
     }
 
+    // If the passed answer is correct
     public static Respond success() {
         var feedback = "Congratulations, you're right!";
         return new Respond(true, feedback);
     }
 
+    // If the answer is incorrect
     public static Respond failure() {
         var feedback = "Wrong answer! Please, try again.";
         return new Respond(false, feedback);
